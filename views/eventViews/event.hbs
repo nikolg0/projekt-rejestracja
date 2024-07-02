@@ -1,4 +1,4 @@
-<h2>Formularz</h2>
+<h2>FORMULARZ</h2>
     <form action="/new" method="POST">
       
         <label for="name">Imię i Nazwisko</label><br />
@@ -6,39 +6,44 @@
         <br /><br />
       <label for="event">Wydarzenie</label><br>
         <select id="event" name="event" required>
+          <option value="...">...</option>
           <option value="Full Stack Developer">Kurs Full Stack Developer</option>
           <option value="Front End Developer">Kurs Front End Developer</option>
           <option value="Front End Developer">Kurs Back End Developer</option>
         </select><br /><br />
       <label for="city">Miasto</label><br>
         <select id="city" name="city" required>
+          <option value="...">...</option>
           <option value="Online">Online</option>
           <option value="Wrocław">Wrocław</option>
           <option value="Gdańsk">Gdańsk</option>
         </select>
         <br /><br />
-      <button type="submit">Zapisz na szkolenie</button>
+      <button type="submit">ZAPISZ NA SZKOLENIE</button>
     </form>
 
-    <h2 >Lista użytkowników</h2>
+    <h2 class="second header">Lista użytkowników</h2>
 <table >
   <thead>
     <tr>
       <th >Imię i nazwisko</th>
       <th >Wydarzenie</th>
       <th >Miasto</th>
+      <th >Akcja</th>
     </tr>
   </thead>
 
   <tbody>
-    {{#each users}}
+    {{#each events}}
       <tr>
         <td>{{this.name}}</td>
         <td>{{this.event}}</td>
-        <td>{{this.city}}</a></td>
+        <td>{{this.city}}</td>
+       <td> <a class="delete" href="/new/delete/{{_id}}">USUŃ</a></td>
       </tr>
     {{/each}}
   </tbody>
+  
 </table>
   </body>
 </html>

@@ -27,14 +27,14 @@ module.exports = {
     console.log(req.body);
   },
 
-  newPage: (req, res) => {
-    Event.find({})
-      .lean()
-      .then((events) => {
-        res.render("eventViews/event", { events: events });
+  delete: (req, res) => {
+    Event.findByIdAndDelete(req.params.id)
+      .then(() => {
+        res.redirect("/new");
       })
       .catch((err) => {
         res.send(err);
       });
+    console.log("Pomyślnie usunięto użytkownika");
   },
 };

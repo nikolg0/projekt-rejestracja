@@ -16,11 +16,11 @@ app.use("/", express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", eventController.index);
+app.get("/new", eventController.index);
 
 app.post("/new", eventController.create);
 
-app.get("/new", eventController.newPage);
+app.get("/new/delete/:id", eventController.delete);
 
 app.listen(8080, function () {
   console.log("Serwer Node.js działa");

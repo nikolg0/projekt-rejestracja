@@ -1,0 +1,86 @@
+body {
+  text-align: center;
+  font-size: 2em;
+  background-color: rgb(231, 231, 231);
+  color: rgb(36, 36, 36);
+  font-family: Nunito Sans;
+  margin: 0;
+}
+
+h2 {
+  background-color: rgb(0, 135, 220);
+  padding: 20px 20px 5px 20px;
+  margin-bottom: 15px;
+}
+
+.second {
+  margin-bottom: 0;
+  padding: 20px;
+}
+
+input,
+select {
+  border: 1px rgb(0, 135, 220) solid;
+  padding: 5px 25px;
+  transition: all 0.3s;
+}
+
+input,
+select,
+button {
+  background-color: rgb(231, 231, 231);
+}
+
+input:hover,
+select:hover,
+button:hover {
+  background-color: rgba(0, 136, 220, 0.525);
+}
+
+button {
+  font-size: 0.7em;
+  border: 2px rgb(0, 135, 220) solid;
+  border-radius: 4px;
+  transition: all 0.3s;
+  color: rgb(22, 22, 22);
+  font-size: 1em;
+  padding: 7px;
+}
+
+table,
+td,
+th {
+  border: 3px rgb(0, 135, 220) solid;
+  text-align: center;
+}
+
+th,
+td {
+  padding: 8px;
+  font-size: 1.5em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.delete {
+  text-decoration: none;
+  color: rgb(22, 22, 22);
+  border: 2px red solid;
+  background-color: rgba(255, 0, 0, 0.295);
+  border-radius: 3px;
+  padding: 3px;
+  transition: all 0.3s;
+}
+
+.delete:hover {
+  background-color: red;
+}
+
+@media (max-width: 480px) {
+  thead {
+    width: 50%;
+  }
+}
