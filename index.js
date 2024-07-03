@@ -22,6 +22,4 @@ app.post("/new", eventController.create);
 
 app.get("/new/delete/:id", eventController.delete);
 
-app.listen(8080, function () {
-  console.log("Serwer Node.js działa");
-});
+app.listen(8080, function () {});

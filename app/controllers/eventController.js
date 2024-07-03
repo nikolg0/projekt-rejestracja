@@ -15,7 +15,6 @@ module.exports = {
   create: (req, res) => {
     const { name, event, city } = req.body;
     const newEvent = new Event({ name, event, city });
-    console.log(req);
     newEvent
       .save()
       .then(() => {
@@ -24,7 +23,6 @@ module.exports = {
       .catch((err) => {
         res.send(err);
       });
-    console.log(req.body);
   },
 
   delete: (req, res) => {
@@ -35,6 +33,5 @@ module.exports = {
       .catch((err) => {
         res.send(err);
       });
-    console.log("Pomyślnie usunięto użytkownika");
   },
 };

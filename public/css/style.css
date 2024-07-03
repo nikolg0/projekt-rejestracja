@@ -80,7 +80,11 @@ table {
 }
 
 @media (max-width: 480px) {
-  thead {
-    width: 50%;
+  th,
+  td {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
